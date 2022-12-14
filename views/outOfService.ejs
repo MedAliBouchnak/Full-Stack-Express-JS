@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="view.css" />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <section id="header">
+      <a href="#"><img src="img/logo.png" class="logo" alt="" /></a>
+      <div>
+        <ul id="navbar">
+          <li><a class="active" href="/Home">Home</a></li>
+          <li><a href="/Services">Shop</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </div>
+    </section>
+    <section class="flexing">
+      <div class="mod">
+        <div><img src="closed.png" class="closed" alt="" /></div>
+        <div class="Off-time">
+          <h2>Open in:</h2>
+          <div>
+            <% if(day == 6 ){ %>
+            <p><%= day - 4 %></p>
+            <% } else if (day == 0){ %>
+            <p><%= (day + 1) %></p>
+            <% } else{%>
+            <p><%= (day = 0) %></p>
+            <% } %>
+            <span>Days</span>
+          </div>
+          <div>
+            <% if(hour < 9 ){ %>
+            <p><%= 8 - hour %></p>
+            <% } else { %>
+            <p><%= (23 - hour) + 9 %></p>
+            <% } %>
+            <span>Hours</span>
+          </div>
+          <div>
+            <p><%= 59 - min %></p>
+            <span> Minutes</span>
+          </div>
+          <div>
+            <p><%= 59 - sec %></p>
+            <span> Seconds</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="openinghours">
+        <div class="openinghourscontent section">
+          <div class="header">
+            <h2>Opening hours</h2>
+            <span id="open-status"
+              ><small class="openorclosed">We are</small></span
+            >
+          </div>
+          <table class="opening-hours-table">
+            <tr
+              id="Monday"
+              itemprop="openingHours"
+              title="Open Monday at 9am to 6pm"
+            >
+              <td>Monday</td>
+              <td class="opens" !important >09:00</td>
+              <td>-</td>
+              <td class="closes">17:00</td>
+            </tr>
+            <tr
+              id="Tuesday"
+              itemprop="openingHours"
+              title="Open Tuesday at 9am to 6pm"
+            >
+              <td>Tuesday</td>
+              <td class="opens">09:00</td>
+              <td>-</td>
+              <td class="closes">17:00</td>
+            </tr>
+            <tr
+              id="Wednesday"
+              itemprop="openingHours"
+              title="Open Wednesday at 9am to 6pm"
+            >
+              <td>Wednesday</td>
+              <td class="opens">09:00</td>
+              <td>-</td>
+              <td class="closes">17:00</td>
+            </tr>
+            <tr
+              id="Thursday"
+              itemprop="openingHours"
+              title="Open Thursday at 9am to 8pm"
+            >
+              <td>Thursday</td>
+              <td class="opens">09:00</td>
+              <td>-</td>
+              <td class="closes">17:00</td>
+            </tr>
+            <tr
+              id="Friday"
+              itemprop="openingHours"
+              title="Open Friday at 9am to 6pm"
+            >
+              <td>Friday</td>
+              <td class="opens">09:00</td>
+              <td>-</td>
+              <td class="closes">17:00</td>
+            </tr>
+            <tr
+              id="Saturday"
+              itemprop="openingHours"
+              title="Open Saturday at 10am to 6pm"
+            >
+              <td>Saturday</td>
+
+              <td>Closed</td>
+            </tr>
+            <tr
+              id="Sunday"
+              itemprop="openingHours"
+              title="Open Sunday at 11am to 4pm"
+            >
+              <td>Sunday</td>
+              <td>Closed</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
